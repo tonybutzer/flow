@@ -1,0 +1,16 @@
+st3=>start: start foo
+io5=>inputoutput: input: a, b
+cond9=>condition: if a
+sub13=>subroutine: print('a')
+io34=>inputoutput: output:  (a + b)
+e32=>end: end function return
+cond18=>operation: print('b') while  i in range(3)
+
+st3->io5
+io5->cond9
+cond9(yes)->sub13
+sub13->io34
+io34->e32
+cond9(no)->cond18
+cond18->io34
+
